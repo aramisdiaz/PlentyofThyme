@@ -15,13 +15,13 @@ function Navbar() {
                         <Link
                             to="/search"
                             className={window.location.pathname === "/search" ? "nav-link active" : "nav-link"}
-                        >Recipe Search</Link>
+                        >Your Pantry</Link>
                     </li>
                     <li className="nav-item">
                         <Link
                             to="/saved"
                             className={window.location.pathname === "/saved" ? "nav-link active" : "nav-link"}
-                        >Your Pantry</Link>
+                        >Your Pins</Link>
                     </li>
                 </ul>
             </div>

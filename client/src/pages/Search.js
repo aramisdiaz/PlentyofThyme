@@ -15,7 +15,7 @@ class Search extends React.Component {
 
     makeBook = bookData => {
         return {
-            _id: bookData.recipe.uri,
+            _id: bookData.recipe.label+bookData.recipe.source,
             servings: bookData.recipe.yield,
             label: bookData.recipe.label,
             ingredients: bookData.recipe.ingredients,
