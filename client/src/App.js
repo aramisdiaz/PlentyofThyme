@@ -7,8 +7,10 @@ import Wrapper from "./components/Wrapper";
 import NoMatch from "./pages/NoMatch";
 import Search from "./pages/Search";
 import Saved from "./pages/Saved";
+//import Pantry from "./pages/Pantry";
 
 import "./App.css";
+
 
 class App extends Component {
  
@@ -22,6 +24,7 @@ class App extends Component {
             <Route exact path="/" component={Search} />
             <Route exact path="/search" component={Search} />
             <Route exact path="/saved" component={Saved} />
+            
             <Route exact path="/noMatch" component={NoMatch} />
           </Wrapper>
         </div>

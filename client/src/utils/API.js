@@ -12,12 +12,24 @@ export default {
     console.log(id);
     return axios.delete("/api/books/" + id).then(result => result.data);
   },
-  // Saves a book to the database
+  // Saves a recipe to the database
   saveBook: function (bookData) {
     return axios.post("/api/books", bookData).then(result => result.data);
   },
-  // Get the saved a books from the database
+  // Get the saved recipes from the database
   savedBooks: function () {
     return axios.get("/api/books").then(result => result.data);
-  }
+  }/*,
+  deleteIngredients: function (id) {
+    console.log(id);
+    return axios.delete("/api/ingredients/" + id).then(result => result.data);
+  },
+  // Saves ingredients to the database
+  saveIngredients: function (ingredientData) {
+    return axios.post("/api/ingredients", ingredientData).then(result => result.data);
+  },
+  // Get the saved ingredients from the database
+  savedIngredients: function () {
+    return axios.get("/api/ingredients").then(result => result.data);
+  }*/
 };
