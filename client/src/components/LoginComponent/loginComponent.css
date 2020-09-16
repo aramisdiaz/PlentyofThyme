@@ -1,0 +1,23 @@
+a, button {
+	vertical-align: baseline !important;
+	overflow: visible !important;
+}
+
+
+div.MuiGrid-container-164 {
+}
+
+@media (min-width: 600px) {
+	div.Login-root-128 {
+    margin: 5% 4% 0% 4%;
+    text-align: center;
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+}
+
+
+
+}
+

@@ -1,15 +1,16 @@
 import React, { Component } from "react";
 import API from "../utils/API";
-import Results from "../components/Results";
+import Ingredients from "../components/Ingredients";
 
 class Pantry extends Component {
     state = {
-        savedIngredients: [],
+        savedRecipes: [],
+        ingredients: []
     }
 
-    componentDidMount() {
-        API.savedIngredients()
-            .then(savedIngredients => this.setState({ savedIngredients: savedIngredients }))
+     componentDidMount() {
+        API.savedRecipes()
+            .then(savedRecipes => this.setState({ savedRecipes: savedRecipes}))
             .catch(err => console.error(err));
     }
 
@@ -17,7 +18,8 @@ class Pantry extends Component {
         return (
             <div className="container">
                 <h2>Your Pantry</h2>
-                <Results books={this.state.savedIngredients} />
+                <Ingredients recipes={this.state.ingredients} />
+                
             </div>
         )
     }

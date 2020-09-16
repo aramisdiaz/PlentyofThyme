@@ -1,4 +1,9 @@
 module.exports = {
-    Book: require("./book"),
-    Ingredient: require("./ingredient")
+    Recipe: require("./recipe"),
+    Ingredient: require("./ingredient"),
+    User: require("./User"),
+    Day: require("./Day"),
+    // Nutrition: require("./Nutrition"),
+    Exercise: require("./Exercise")
+    // Water: require("./Water")
   };

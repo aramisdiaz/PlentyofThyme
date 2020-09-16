@@ -7,7 +7,7 @@ mongoose.connect(
     process.env.MONGODB_URI || "mongodb://localhost/plentyofthyme"
 );
 
-const bookSeed =
+const recipeSeed =
 {
     source: ["The Daily Meal"],
     image: "https://www.edamam.com/web-img/b7c/b7c5efd59e548df9fd3fc8895937728c.jpg",
@@ -16,9 +16,9 @@ const bookSeed =
 }
 
 
-db.Book
+db.Recipe
     .remove({})
-    .then(() => db.Book.collection.insertMany(bookSeed))
+    .then(() => db.Recipe.collection.insertMany(recipeSeed))
     .then(data => {
         console.log(data.result.n + " records inserted!");
         process.exit(0);
