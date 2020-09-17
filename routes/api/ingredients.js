@@ -1,16 +1,16 @@
 const router = require("express").Router();
-const ingredientsController = require("../../controllers/ingredientsController");
+const booksController = require("../../controllers/booksControllers");
 
 // Matches with "/api/ingredients"
 router.route("/")
-  .get(ingredientsController.findAllIng)
-  .post(ingredientsController.createIng);
+  .get(booksController.findAllIng)
+  .post(booksController.createIng);
 
 // Matches with "/api/ingredients/:id"
 router
   .route("/:id")
-  .get(ingredientsController.findByIngId)
-  .put(ingredientsController.updateIng)
-  .delete(ingredientsController.removeIng);
+  .get(booksController.findByIngId)
+  .put(booksController.updateIng)
+  .delete(booksController.removeIng);
 
 //module.exports = router;

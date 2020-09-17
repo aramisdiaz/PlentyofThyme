@@ -4,24 +4,21 @@ import Results from "../components/Results";
 
 class Saved extends Component {
     state = {
-        savedRecipes: [],
-        savedIngredients: []
+        savedBooks: [],
     }
 
     componentDidMount() {
-        API.savedRecipes()
-            .then(savedRecipes => this.setState({ savedRecipes: savedRecipes }))
+        API.savedBooks()
+            .then(savedBooks => this.setState({ savedBooks: savedBooks }))
             .catch(err => console.error(err));
     }
-
 
     render() {
         return (
             <div className="container">
                 <h2>Your Pinned Recipes</h2>
-                <Results recipes={this.state.savedRecipes} />
+                <Results books={this.state.savedBooks} />
             </div>
-            
         )
     }
 }

@@ -1,11 +1,9 @@
 const router = require("express").Router();
-const recipeRoutes = require("./recipes");
-const healthTrackerRoutes = require("./healthTracker");
+const bookRoutes = require("./books");
 //const ingredientRoutes = require("./ingredients")
 
-// Recipe routes
-router.use("/healthTracker", healthTrackerRoutes);
-router.use("/recipes", recipeRoutes);
+// Book routes
+router.use("/books", bookRoutes);
 //router.use("/ingredients", ingredientRoutes)
 
 module.exports = router;

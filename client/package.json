@@ -5,21 +5,10 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
-    "@material-ui/core": "^1.4.1",
-    "@material-ui/icons": "^1.1.1",
-    "axios": "^0.18.1",
-    "chart.js": "^2.7.3",
-    "chartjs": "^0.3.24",
-    "jss": "^9.8.7",
-    "lodash": "^4.17.13",
-    "moment": "^2.22.2",
     "react": "^16.6.3",
-    "react-chartjs-2": "^2.7.4",
     "react-dom": "^16.6.3",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^2.1.1",
-    "start": "^5.1.0",
-    "switch": "0.0.0"
+    "react-scripts": "^2.1.1"
   },
   "scripts": {
     "start": "react-scripts start",

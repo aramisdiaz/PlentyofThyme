@@ -6,32 +6,30 @@ import API from "../utils/API";
 class Search extends React.Component {
     state = {
         value: "",
-        recipes: []
+        books: []
     };
 
     componentDidMount() {
-        this.searchRecipe();
+        this.searchBook();
     }
 
-    makeRecipe = recipeData => {
+    makeBook = bookData => {
         return {
-            _id: recipeData.recipe.label+recipeData.recipe.source,
-            servings: recipeData.recipe.yield,
-            label: recipeData.recipe.label,
-            ingredients: recipeData.recipe.ingredients,
-            source: recipeData.recipe.source,
-            image: recipeData.recipe.image,
-            link: recipeData.recipe.url
+            _id: bookData.recipe.label+bookData.recipe.source,
+            servings: bookData.recipe.yield,
+            label: bookData.recipe.label,
+            ingredients: bookData.recipe.ingredients,
+            source: bookData.recipe.source,
+            image: bookData.recipe.image,
+            link: bookData.recipe.url
         }
     }
 
-
-
-    searchRecipe = query => {
-        API.getRecipe(query)
+    searchBook = query => {
+        API.getBook(query)
             .then(
                 //console.log(res.data),
-                res => this.setState({ recipes: res.data.hits.map(recipeData => this.makeRecipe(recipeData))}))
+                res => this.setState({ books: res.data.hits.map(bookData => this.makeBook(bookData)) }))
             .catch(err => console.error(err));
     };
 
@@ -45,7 +43,7 @@ class Search extends React.Component {
 
     handleFormSubmit = event => {
         event.preventDefault();
-        this.searchRecipe(this.state.search);
+        this.searchBook(this.state.search);
     };
 
     render() {
@@ -58,7 +56,7 @@ class Search extends React.Component {
                 />
                 <div className="container">
                     <h2>Results</h2>
-                    <Results recipes={this.state.recipes}/>
+                    <Results books={this.state.books} />
                 </div>
             </div>
         )
