@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes");
-
+require('dotenv').config({ path: '.env' });
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -28,7 +28,7 @@ app.use(routes)
 
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.REACT_APP_MONGODB_URI || "mongodb://localhost/plentyofthyme", { useNewUrlParser: true });
+mongoose.connect(process.env.REACT_APP_MONGODB_URI, { useNewUrlParser: true });
 console.log(process.env.PORT)
 
 app.listen(PORT, () => {
