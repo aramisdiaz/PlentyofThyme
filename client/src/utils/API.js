@@ -1,10 +1,10 @@
-
 import axios from "axios";
 
 export default {
   getRecipe: function (query) {
     //Todo: Change API key to ENV variable
-    return axios.get(`https://api.edamam.com/search?q=${query}&app_id=${process.env.REACT_APP_EDAMAM_ID}&app_key=${process.env.REACT_APP_EDAMAM_KEY}`);
+
+    return axios.get(`https://api.edamam.com/search?q=${query}&app_id=`+ process.env.REACT_APP_EDAMAM_ID +`&app_key=`+ process.env.REACT_APP_EDAMAM_KEY);
   },
   //"https://api.edamam.com/search?q=${query}&app_id=1fc1ea16&app_key=f3b241fe336a5fbbd2f3053451e1c4b9"
   //https://api.edamam.com/search?q=${query}&app_id=${process.env.REACT_APP_EDAMAM_ID}&app_key=${process.env.REACT_APP_EDAMAM_KEY}
