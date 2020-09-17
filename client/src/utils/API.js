@@ -4,12 +4,8 @@ export default {
   getRecipe: function (query) {
     //Todo: Change API key to ENV variable
 
-    return axios.get(`https://api.edamam.com/search?q=${query}&app_id=`+ process.env.REACT_APP_EDAMAM_ID +`&app_key=`+ process.env.REACT_APP_EDAMAM_KEY);
+    return axios.get(`https://api.edamam.com/search?q=${query}&app_id=` + process.env.REACT_APP_EDAMAM_ID + `&app_key=` + process.env.REACT_APP_EDAMAM_KEY);
   },
-  //"https://api.edamam.com/search?q=${query}&app_id=1fc1ea16&app_key=f3b241fe336a5fbbd2f3053451e1c4b9"
-  //https://api.edamam.com/search?q=${query}&app_id=${process.env.REACT_APP_EDAMAM_ID}&app_key=${process.env.REACT_APP_EDAMAM_KEY}
-  //https://www.googleapis.com/recipes/v1/volumes?q=${query}
-  // Deletes the recipe with the given id
   deleteRecipe: function (id) {
     console.log(id);
     return axios.delete("/api/recipes/" + id).then(result => result.data);
