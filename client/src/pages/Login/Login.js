@@ -36,7 +36,7 @@ class Login extends Component {
       .then(result => {
         localStorage.setItem('jwtToken', result.data.token);
         localStorage.setItem('userId', result.data.userId);
-        this.props.history.push('/');
+        this.props.history.push('/search');
       })
       .catch(error => {
         console.log(error);

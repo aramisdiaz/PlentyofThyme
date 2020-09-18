@@ -20,14 +20,14 @@ export default {
   },
   deleteIngredients: function (id) {
     console.log(id);
-    return axios.delete("/api/recipes/ingredients/" + id).then(result => result.data);
+    return axios.delete("/api/ingredients/" + id).then(result => result.data);
   },
   // Saves ingredients to the database
   saveIngredients: function (recipeData) {
-    return axios.post("/api/recipes/ingredients", recipeData).then(result => result.data);
+    return axios.post("/api/ingredients", recipeData).then(result => result.data);
   },
   // Get the saved ingredients from the database
   savedIngredients: function () {
-    return axios.get("/api/recipes/ingredients").then(result => result.data);
+    return axios.get("/api/ingredients").then(result => result.data);
   }
 };

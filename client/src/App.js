@@ -26,16 +26,17 @@ class App extends Component {
     return (
       <Router>
         <div>
+
           <NavBar />
           <Header />
           <Wrapper>
-            <Route exact path="/" component={Search} />
+            <Route exact path="/" component={Login} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/signup" component={Signup} />
             <Route exact path="/search" component={Search} />
             <Route exact path="/saved" component={Saved} />
             <Route exact path="/pantry" component={Pantry} />
             <Route exact path="/noMatch" component={NoMatch} />
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/signup" component={Signup} />
             <Route exact path="/water" component={WaterPage} />
             <Route exact path="/nutrition" component={NutritionPage} />
             <Route exact path="/exercise" component={ExercisePage} />

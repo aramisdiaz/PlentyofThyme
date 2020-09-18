@@ -13,16 +13,6 @@ router
   .put(recipesController.update)
   .delete(recipesController.remove);
 
-router.route("/ingredients")
-  .get(recipesController.findAllIng)
-  .post(recipesController.createIng);
-
-// Matches with "/api/recipes/:id"
-router
-  .route("/ingredients/:id")
-  .get(recipesController.findByIngId)
-  .put(recipesController.updateIng)
-  .delete(recipesController.removeIng);
 
 
 

@@ -5,12 +5,12 @@ import Ingredients from "../components/Ingredients";
 class Pantry extends Component {
     state = {
         savedRecipes: [],
-        ingredients: []
+        savedIngredients: []
     }
 
-     componentDidMount() {
+    componentDidMount() {
         API.savedRecipes()
-            .then(savedRecipes => this.setState({ savedRecipes: savedRecipes}))
+            .then(savedRecipes => this.setState({ savedRecipes: savedRecipes }))
             .catch(err => console.error(err));
     }
 
@@ -18,8 +18,8 @@ class Pantry extends Component {
         return (
             <div className="container">
                 <h2>Your Pantry</h2>
-                <Ingredients recipes={this.state.ingredients} />
-                
+                <Ingredients recipes={this.state.savedRecipes} />
+
             </div>
         )
     }

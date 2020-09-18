@@ -25,7 +25,10 @@ class Search extends React.Component {
         }
     }
 
-
+    
+    
+// ***
+//res => this.setState({ recipes: res.data.hits.map(recipeData => this.makeRecipe(recipeData))}))
 
     searchRecipe = query => {
         API.getRecipe(query)
