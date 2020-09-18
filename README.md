@@ -1,5 +1,11 @@
 # Create React Express App
 
+## Project Description
+
+PlentyofThyme is the newest healthy eating app in the marketplace! Similar to Epicurious, MRKT is a react-based single-page application which allows users to pin ingredients to their pantry and save receipes that they find interesting, heahty, and unique to help them prepare for their weekly meals. 
+
+xxxx add/edit/delete their own listings, look through other user's listings, like and comment listings and also add to cart and checkout. This application utilizes React components, helper/util functions, and lifecycle methods in order to query and display books based on the user searches. This application uses the full MERN (MongoDB, Express, React, Node) stack so that users can save items to their cart for later purchase or have the chance to reference and edit their listings later!
+
 ## About This Boilerplate
 
 This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
