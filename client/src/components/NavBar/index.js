@@ -11,6 +11,12 @@ function Navbar() {
             <div className="container">
                 <Link className="navbar-brand" to="/">Plenty of Thyme</Link>
                 <ul className="navbar-nav">
+                <li className="nav-item">
+                        <Link
+                            to="/search"
+                            className={window.location.pathname === "/search" ? "nav-link active" : "nav-link"}
+                        >Search</Link>
+                    </li>
                     <li className="nav-item">
                         <Link
                             to="/pantry"
@@ -29,5 +35,6 @@ function Navbar() {
 
     );
 }
+
 
 export default Navbar;

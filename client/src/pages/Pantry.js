@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import API from "../utils/API";
 import Ingredients from "../components/Ingredients";
+import NavBar from "../components/NavBar";
+
 
 class Pantry extends Component {
     state = {
@@ -16,7 +18,10 @@ class Pantry extends Component {
 
     render() {
         return (
+            
             <div className="container">
+                <NavBar />
+                <br /><br />
                 <h2>Your Pantry</h2>
                 <Ingredients recipes={this.state.savedRecipes} />
 

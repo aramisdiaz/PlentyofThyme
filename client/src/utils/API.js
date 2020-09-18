@@ -2,7 +2,6 @@ import axios from "axios";
 
 export default {
   getRecipe: function (query) {
-    //Todo: Change API key to ENV variable
 
     return axios.get(`https://api.edamam.com/search?q=${query}&app_id=` + process.env.REACT_APP_EDAMAM_ID + `&app_key=` + process.env.REACT_APP_EDAMAM_KEY);
   },
