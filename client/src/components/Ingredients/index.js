@@ -48,7 +48,10 @@ class Ingredients extends Component {
                                                     {res.text}
                                                     </h5>
 
+                                                    
+
                                                 ))}
+                                                
                                                 <div>
 
                                                     <button onClick={() => this.handleSave(result)} className="btn badge-pill btn-outline-danger mt-3 ml-3" >

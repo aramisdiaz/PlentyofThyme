@@ -9,7 +9,7 @@ function Navbar() {
 
         <nav className="navbar navbar-expand-lg text-light">
             <div className="container">
-                <Link className="navbar-brand" to="/">Plenty of Thyme</Link>
+                <Link className="navbar-brand" to="/search">Plenty of Thyme</Link>
                 <ul className="navbar-nav">
                 <li className="nav-item">
                         <Link

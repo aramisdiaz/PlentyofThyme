@@ -2,3 +2,9 @@
 .jumbotron {
     background-image: url(thyme.jpg);
 }
+
+h1 {
+    font-family: 'Nixie One', cursive;
+    text-shadow: -1px 2px 0 black;
+    font-size: 50px;
+}
